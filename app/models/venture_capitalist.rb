@@ -25,7 +25,7 @@ class VentureCapitalist
     end
 
     def invested(domain)
-        FundingRound.all.select {|round| round.investment if round.startup.domain == domain}.reduce(0){|i, round| i + round.investment}
+        FundingRound.all.select {|round| round.startup.domain == domain}.reduce(0){|i, round| i + round.investment}
     end
 
     def self.all
