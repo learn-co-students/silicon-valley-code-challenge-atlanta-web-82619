@@ -42,7 +42,7 @@ class VentureCapitalist
     def invested(domain)
         total = []
         self.funding_rounds.select do |fr|
-            if fr.startup..domain == domain
+            if fr.startup.domain == domain
                 total << fr.investment
             end
         end
